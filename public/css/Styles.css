@@ -1,0 +1,471 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#e9e4db;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#e9e4db;
+padding:18px 50px;
+}
+
+/* LOGO */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+font-size:12px;
+font-weight:bold;
+color:#5b4638;
+line-height:1.2;
+}
+
+/* MENU */
+
+.menu a{
+margin-left:25px;
+text-decoration:none;
+color:#5b4638;
+font-weight:bold;
+font-size:14px;
+letter-spacing:1px;
+}
+
+.menu a:hover{
+opacity:0.7;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+opacity:0.7;
+}
+
+/* HERO */
+
+.hero{
+height:250px;
+background:url("../images/banner.jpeg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:40px;
+font-weight:bold;
+}
+
+/* CONTENIDO */
+
+main{
+width:80%;
+margin:auto;
+margin-top:40px;
+}
+
+/* TARJETAS */
+
+.card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:40px;
+border-radius:15px;
+margin-bottom:40px;
+}
+
+.card.azul{
+background:#b7d3df;
+}
+
+.card.cafe{
+background:#7b5a49;
+color:white;
+}
+
+.info{
+width:50%;
+}
+
+.info h2{
+letter-spacing:3px;
+margin-bottom:15px;
+}
+
+.info p{
+margin-bottom:20px;
+font-size:14px;
+line-height:1.6;
+}
+
+/* BOTON */
+
+button{
+background:#5aa0be;
+color:white;
+border:none;
+padding:10px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.8;
+}
+
+/* IMAGENES */
+
+.imagenes{
+display:flex;
+gap:10px;
+}
+
+.imagenes img{
+width:90px;
+height:120px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#6b4e3e;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+font-size:12px;
+}
+
+/* izquierda */
+
+.footer-left{
+letter-spacing:1px;
+}
+
+/* centro */
+
+.footer-center{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.footer-center img{
+width:45px;
+height:45px;
+border-radius:50%;
+background:white;
+padding:5px;
+}
+
+/* derecha */
+
+.footer-right{
+text-align:right;
+line-height:1.4;
+}
+
+/* HERO RECURSOS */
+
+.hero-recursos{
+height:220px;
+background:url("../images/recursos-banner.jpeg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:20px;
+margin:20px 40px;
+}
+
+.hero-recursos h1{
+color:white;
+font-size:45px;
+letter-spacing:3px;
+}
+
+
+/* CONTENEDOR */
+
+.contenedor{
+width:80%;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:30px;
+margin-top:30px;
+}
+
+
+/* TARJETAS RECURSOS */
+
+.recurso-card{
+height:220px;
+border-radius:20px;
+display:flex;
+align-items:center;
+padding:40px;
+color:white;
+background-size:cover;
+background-position:center;
+position:relative;
+overflow:hidden;
+}
+
+/* OSCURECER IMAGEN */
+
+.recurso-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
+}
+
+.contenido{
+position:relative;
+width:50%;
+}
+
+.contenido.derecha{
+margin-left:auto;
+text-align:right;
+}
+
+.contenido h2{
+letter-spacing:3px;
+margin-bottom:10px;
+}
+
+.contenido p{
+font-size:14px;
+line-height:1.5;
+margin-bottom:15px;
+}
+
+/* BOTON */
+
+.recurso-card button{
+background:#6fa8c7;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+.recurso-card button:hover{
+opacity:0.8;
+}
+
+
+/* IMAGENES DE FONDO - RECURSOS */
+
+.devocionales{
+background-image:url("../images/devocionales.jpeg");
+}
+
+.eventos{
+background-image:url("../images/eventos.jpeg");
+}
+
+.predicas{
+background-image:url("../images/predicas.jpeg");
+}
+
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 13px;
+        margin-left: 0;
+    }
+
+    /* HERO */
+    .hero,
+    .hero-recursos {
+        padding: 40px 16px;
+        text-align: center;
+        height: auto;
+        min-height: 160px;
+    }
+
+    .hero {
+        font-size: 2rem;
+    }
+
+    .hero-recursos {
+        margin: 12px 16px;
+    }
+
+    .hero-recursos h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    /* MAIN */
+    main {
+        width: 95%;
+    }
+
+    /* CARDS */
+    .card {
+        flex-direction: column !important;
+        padding: 24px 16px;
+        gap: 20px;
+    }
+
+    .card .info,
+    .card .imagenes,
+    .card .sobre-img,
+    .card .mapa {
+        width: 100% !important;
+    }
+
+    /* GALERIA */
+    .galeria .imagenes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagenes img {
+        width: 80px;
+        height: 100px;
+    }
+
+    /* HORARIOS */
+    .horarios-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .horario-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* RECURSOS */
+    .contenedor {
+        width: 95%;
+    }
+
+    .recurso-card {
+        height: auto;
+        min-height: 180px;
+        padding: 24px 16px;
+    }
+
+    .contenido,
+    .contenido.derecha {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    /* CONTACTO */
+    .formulario-card {
+        padding: 20px 16px;
+    }
+
+    .campo input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .medios-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* MAPA */
+    .mapa iframe {
+        height: 180px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        font-size: 1.6rem;
+    }
+
+    .hero-recursos h1 {
+        font-size: 1.6rem;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .imagenes img {
+        width: 70px;
+        height: 90px;
+    }
+
+}
