@@ -43,23 +43,37 @@
 
         <!-- FORMULARIO -->
         <div class="col-md-6">
-            <h2 class="fw-bold mb-4" style="letter-spacing:2px;font-size:1.1rem;">PONTE EN CONTACTO CON NOSOTROS:</h2>
-            <div class="p-4 rounded-4" style="background:#b7d3df;">
-                <div class="mb-3">
-                    <label class="form-label fw-bold" style="font-size:14px;">Nombre:</label>
-                    <input type="text" class="form-control" style="border-radius:8px;">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label fw-bold" style="font-size:14px;">Correo electrónico:</label>
-                    <input type="email" class="form-control" style="border-radius:8px;">
-                </div>
-                <div class="mb-4">
-                    <label class="form-label fw-bold" style="font-size:14px;">Número:</label>
-                    <input type="tel" class="form-control" style="border-radius:8px;">
-                </div>
-                <button class="btn w-100" style="background:#5aa0be;color:white;border-radius:8px;">ENVIAR</button>
+    <h2 class="fw-bold mb-4" style="letter-spacing:2px;font-size:1.1rem;">PONTE EN CONTACTO CON NOSOTROS:</h2>
+
+    @if(session('success'))
+        <div class="alert alert-success mb-3">{{ session('success') }}</div>
+    @endif
+
+    <div class="p-4 rounded-4" style="background:#b7d3df;">
+        <form action="{{ route('contacto.store') }}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label class="form-label fw-bold" style="font-size:14px;">Nombre:</label>
+                <input type="text" name="nombre" class="form-control @error('nombre') is-invalid @enderror"
+                    value="{{ old('nombre') }}" style="border-radius:8px;">
+                @error('nombre') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
-        </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" style="font-size:14px;">Correo electrónico:</label>
+                <input type="email" name="correo" class="form-control @error('correo') is-invalid @enderror"
+                    value="{{ old('correo') }}" style="border-radius:8px;">
+                @error('correo') <div class="invalid-feedback">{{ $message }}</div> @enderror
+            </div>
+            <div class="mb-4">
+                <label class="form-label fw-bold" style="font-size:14px;">Número:</label>
+                <input type="tel" name="numero" class="form-control @error('numero') is-invalid @enderror"
+                    value="{{ old('numero') }}" style="border-radius:8px;">
+                @error('numero') <div class="invalid-feedback">{{ $message }}</div> @enderror
+            </div>
+            <button type="submit" class="btn w-100" style="background:#5aa0be;color:white;border-radius:8px;">ENVIAR</button>
+        </form>
+    </div>
+</div>
 
         <!-- MEDIOS Y REDES -->
         <div class="col-md-6">

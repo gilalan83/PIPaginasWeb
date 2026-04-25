@@ -58,18 +58,25 @@
         </div>
     </div>
 
+    <section style="padding: 4rem 1rem; text-align: center;">
+
+    <video src="{{ asset('images/video.mp4') }}" autoplay muted loop playsinline controls
+        style="width:350px; border-radius:20px; object-fit:cover; display:block; margin:0 auto;">
+    </video>
+</section>
+
     <!-- GALERIA -->
     <div class="row g-2 mb-4">
         <div class="col-6 col-md-3"><img src="{{ asset('images/img2.jpeg') }}" class="img-fluid rounded-3" style="height:160px;width:100%;object-fit:cover;"></div>
         <div class="col-6 col-md-3"><img src="{{ asset('images/img1.jpeg') }}" class="img-fluid rounded-3" style="height:160px;width:100%;object-fit:cover;"></div>
-        <div class="col-6 col-md-3"><img src="{{ asset('images/devocionales.jpeg') }}" class="img-fluid rounded-3" style="height:160px;width:100%;object-fit:cover;"></div>
+        <div class="col-6 col-md-3"><img src="{{ asset('images/img3.jpeg') }}" class="img-fluid rounded-3" style="height:160px;width:100%;object-fit:cover;"></div>
         <div class="col-6 col-md-3"><img src="{{ asset('images/predicas.jpeg') }}" class="img-fluid rounded-3" style="height:160px;width:100%;object-fit:cover;"></div>
     </div>
 
     <!-- PALABRA RHEMA -->
     <div class="row align-items-center p-4 rounded-4 mb-4" style="background:#b7d3df;">
         <div class="col-md-6 mb-3 mb-md-0">
-            <img src="{{ asset('images/img1.jpeg') }}" alt="Gran Comisión" class="img-fluid rounded-3" style="max-height:250px;width:100%;object-fit:cover;">
+            <img src="{{ asset('images/recursos-banner.jpeg') }}" alt="Gran Comisión" class="img-fluid rounded-3" style="max-height:250px;width:100%;object-fit:cover;">
         </div>
         <div class="col-md-6">
             <h2 class="fw-bold mb-3" style="letter-spacing:3px;">PALABRA RHEMA 2026</h2>
